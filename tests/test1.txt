@@ -1,0 +1,30 @@
+.extern a, b
+.global c
+.section mika
+
+iret #ovde uradjen iret
+
+luka:
+push r1
+.skip 017 
+.word r
+.word c, a, 0x2d
+pop pc #isto neki komentar
+call asdf
+r: cmp pc, sp
+jmp *c
+.section asdadqw
+t:
+.equ s, 0241
+jmp *[r1 + s]
+sub r0, r3
+cmp r1, r2
+jmp luka
+call %c
+ldr r0, %r
+c: 
+str r4, r2
+.section pera
+add r0, r7
+.equ asdf, 71
+.end
